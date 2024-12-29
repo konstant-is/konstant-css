@@ -2,16 +2,16 @@
   "name": "@konstant/css",
   "private": "false",
   "version": "0.0.4",
+  "main": "dist/theme.css",
   "files": [
-    "styles"
+    "dist",
+    "src/styles",
+    "src/theme.scss"
   ],
-  "type": "module",
   "scripts": {
-    "build": "pnpm clean && tsup",
-    "dev": "tsup --watch",
-    "clean": "rm -rf dist",
-    "prepare": "husky",
-    "ci:version-patch": "node updateVersion patch"
+    "clean": "rimraf dist",
+    "build": "pnpm clean && pnpm build:styles",
+    "build:styles": "sass src/theme.scss dist/theme.css --no-source-map"
   },
   "dependencies": {
     "postcss": "^8.4.49",
@@ -22,6 +22,7 @@
     "@types/node": "^22.10.2",
     "esbuild-sass-plugin": "^3.3.1",
     "husky": "^9.1.7",
+    "rimraf": "^6.0.1",
     "semver": "^7.6.3",
     "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
