@@ -1,0 +1,21 @@
+
+#!/bin/bash
+set -e
+trap 'log "An error occurred. Exiting script."; exit 1' ERR
+
+log() {
+  echo "$(date +"%Y-%m-%d %H:%M:%S") - $1"
+}
+
+version_patch() {
+  if [ -n "$(git status --porcelain)" ]; then
+    log "Changes detected in project. Skipping version bump."
+    return
+  fi
+
+  log "Bumping version..."
+  pnpm run ci:version-patch
+  echo ""
+}
+
+version_patch
