@@ -12,7 +12,7 @@ const incrementVersion = (currentVersion, releaseType) => {
 };
 
 const updateVersion = (releaseType) => {
-  const packageJsonPath = path.resolve(__dirname, "package.json");
+  const packageJsonPath = path.resolve(__dirname, "../package.json");
 
   try {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));

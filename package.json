@@ -11,7 +11,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "pnpm clean && pnpm build:styles",
-    "build:styles": "sass src/theme.scss dist/theme.css --no-source-map"
+    "build:styles": "sass src/theme.scss dist/theme.css --no-source-map",
+    "ci:version-patch": "node scripts/ci-version.js"
   },
   "dependencies": {
     "postcss": "^8.4.49",
