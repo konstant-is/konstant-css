@@ -1,0 +1,21 @@
+{
+  "name": "@konstant/theme",
+  "private": "false",
+  "files": [
+    "styles"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "postcss": "^8.4.49",
+    "sass": "^1.83.0"
+  },
+  "devDependencies": {
+    "esbuild-sass-plugin": "^3.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "latest"
+  }
+}
