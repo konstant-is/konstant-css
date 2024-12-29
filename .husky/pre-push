@@ -39,14 +39,21 @@ version_patch() {
   log "Bumping version..."
   pnpm run ci:version-patch
 
+  # Get the updated version from package.json
+  local version=$(node -p "require('./package.json').version")
+
   log "Staging version bump changes..."
   git add package.json
 
   log "Committing version bump..."
   git commit -m "chore: patch version"
 
-  log "Pushing version bump to remote..."
+  log "Creating tag for version $version..."
+  git tag -a "v$version" -m "Release version $version"
+
+  log "Pushing changes and tag to remote..."
   git push
+  git push origin "v$version"
 
   log "Version patch process completed."
 }
