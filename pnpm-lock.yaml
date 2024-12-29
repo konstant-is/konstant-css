@@ -16,6 +16,9 @@ devDependencies:
   esbuild-sass-plugin:
     specifier: ^3.3.1
     version: 3.3.1(esbuild@0.24.2)(sass-embedded@1.83.0)
+  husky:
+    specifier: ^9.1.7
+    version: 9.1.7
   tsup:
     specifier: ^8.3.5
     version: 8.3.5(postcss@8.4.49)(typescript@5.7.2)
@@ -829,6 +832,12 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
+    dev: true
+
+  /husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
     dev: true
 
   /immutable@5.0.3:
