@@ -2,6 +2,7 @@
   "name": "@konstant/css",
   "private": "false",
   "version": "0.0.4",
+  "type": "module",
   "main": "dist/theme.css",
   "files": [
     "dist",
