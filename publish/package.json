@@ -1,6 +1,6 @@
 {
   "name": "@konstant/konstant-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Common CSS for websites",
   "type": "module",
   "exports": {
