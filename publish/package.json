@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     "./styles": "./dist/styles.css",
-    "./scss": "./dist/styles.scss"
+    "./scss": "./dist/styles.scss",
+    "./scss/breakpoints": "./dist/styles/mixins/breakpoints.scss"
   },
   "files": [
     "dist"
